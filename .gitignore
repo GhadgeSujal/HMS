@@ -1,0 +1,16 @@
+# ===== Angular (HMS-Frontend) =====
+HMS-Frontend/node_modules/      # npm dependencies, खूप मोठी फाइल्स
+HMS-Frontend/dist/              # Angular build output
+HMS-Frontend/.angular/          # Angular internal cache
+
+# ===== Spring Boot (HMS-Backend) =====
+HMS-Backend/target/             # Maven build output
+
+# ===== IDE / Editor files =====
+.vscode/                        # VS Code settings
+.idea/                          # IntelliJ settings
+*.iml                           # IntelliJ module files
+
+# ===== OS files =====
+.DS_Store                        # Mac OS system file
+Thumbs.db                        # Windows system file

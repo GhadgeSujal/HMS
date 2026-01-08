@@ -1,0 +1,83 @@
+<nav style="margin:auto" class="navbar navbar-expand-lg bg-dark">
+
+  <a style="color: white;" class="navbar-brand" href="#">SIDDHINATH HOSPITALS</a>
+  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+
+
+      <li class="nav-item">
+        <a style="color: white;" class="nav-link active" aria-current="page" href="javascript:void(0);"
+          routerLink="/docdash">Back</a>
+      </li>
+    </ul>
+
+    <div class="mx-2">
+
+      <button style="margin: 5px;" class="btn btn-danger" data-toggle="modal" data-target="#loginModal"><a
+          style="color:white;" href="javascript:void(0);" (click)="logout()">Logout</a></button>
+
+    </div>
+
+  </div>
+
+</nav>
+
+<div class="container mt-4">
+  <h2 class="text-center mb-4">Update Patient</h2>
+
+  <form #f="ngForm" (ngSubmit)="onSubmit()" novalidate>
+
+    <!-- Name -->
+    <div class="form-group mb-3">
+      <label>Name</label>
+      <input type="text" class="form-control" name="name" [(ngModel)]="patient.name" required>
+    </div>
+
+    <!-- Age -->
+    <div class="form-group mb-3">
+      <label>Age</label>
+      <input type="text" class="form-control" name="age" [(ngModel)]="patient.age" required>
+    </div>
+
+    <!-- Blood Group -->
+    <div class="form-group mb-3">
+      <label>Blood Group</label>
+      <input type="text" class="form-control" name="blood" [(ngModel)]="patient.blood" required>
+    </div>
+
+    <!-- Prescription -->
+    <div class="form-group mb-3">
+      <label>Prescription</label>
+      <input type="text" class="form-control" name="prescription" [(ngModel)]="patient.prescription" required>
+    </div>
+
+    <!-- Dose -->
+    <div class="form-group mb-3">
+      <label>Dose</label>
+      <input type="text" class="form-control" name="dose" [(ngModel)]="patient.dose" required>
+    </div>
+
+    <!-- Fees -->
+    <div class="form-group mb-3">
+      <label>Fees</label>
+      <input type="text" class="form-control" name="fees" [(ngModel)]="patient.fees" required>
+    </div>
+
+    <!-- Urgency -->
+    <div class="form-group mb-4">
+      <label>Urgency</label>
+      <input type="text" class="form-control" name="urgency" [(ngModel)]="patient.urgency" required>
+    </div>
+
+    <!-- Submit -->
+    <button type="submit" class="btn btn-primary" [disabled]="f.invalid">
+      Update Patient
+    </button>
+
+  </form>
+</div>

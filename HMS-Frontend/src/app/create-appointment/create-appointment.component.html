@@ -1,0 +1,88 @@
+<nav style="margin:auto" class="navbar navbar-expand-lg bg-dark">
+
+  <a style="color: white;" class="navbar-brand" href="#">SIDDHINATH HOSPITALS</a>
+  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+
+
+      <li class="nav-item">
+
+      <li class="nav-item">
+        <a style="color: white;" class="nav-link active" aria-current="page" href="javascript:void(0);"
+          routerLink="/appointmentlist">Back</a>
+      </li>
+
+
+
+    </ul>
+
+    <div class="mx-2">
+
+      <button style="margin: 5px;" class="btn btn-danger" data-toggle="modal" data-target="#loginModal"><a
+          style="color:white;" href="javascript:void(0);" (click)="logout()">Logout</a></button>
+
+    </div>
+
+  </div>
+
+</nav>
+<br>
+<div class="container">
+
+  <div class="container">
+    <h2 class="text-center">Add New Appointment</h2>
+
+    <form #f="ngForm" (ngSubmit)="onSubmit(f)" novalidate>
+
+      <!-- Name -->
+      <div class="form-group">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" class="form-control" placeholder="Enter name" required
+          [(ngModel)]="appointment.name">
+        <div *ngIf="f.submitted && !appointment.name" class="text-danger">
+          Name is required.
+        </div>
+      </div>
+
+      <!-- Age -->
+      <div class="form-group">
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age" class="form-control" placeholder="Enter age" required
+          [(ngModel)]="appointment.age">
+        <div *ngIf="f.submitted && !appointment.age" class="text-danger">
+          Age is required.
+        </div>
+      </div>
+
+      <!-- Symptoms -->
+      <div class="form-group">
+        <label for="symptoms">Symptoms:</label>
+        <input type="text" id="symptoms" name="symptoms" class="form-control" placeholder="Enter symptoms" required
+          [(ngModel)]="appointment.symptoms">
+        <div *ngIf="f.submitted && !appointment.symptoms" class="text-danger">
+          Symptoms are required.
+        </div>
+      </div>
+
+      <!-- Number -->
+      <div class="form-group">
+        <label for="number">Number:</label>
+        <input type="text" id="number" name="number" class="form-control" placeholder="Enter contact number" required
+          [(ngModel)]="appointment.number">
+        <div *ngIf="f.submitted && !appointment.number" class="text-danger">
+          Number is required.
+        </div>
+      </div>
+
+      <!-- Submit button -->
+      <button type="submit" class="btn btn-primary mt-3" []="f.invalid">
+        Submit
+      </button>
+
+    </form>
+  </div>

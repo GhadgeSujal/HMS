@@ -1,0 +1,22 @@
+.footer {
+  width: 100%;
+}
+
+.footer h5,
+.footer h6 {
+  color: #f8f9fa;
+}
+
+.footer p {
+  color: #cccccc;
+}
+
+.footer-link {
+  color: #cccccc;
+  text-decoration: none;
+}
+
+.footer-link:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}
