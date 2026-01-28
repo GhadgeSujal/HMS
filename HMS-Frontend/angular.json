@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/hospital-management-frontend",
+            "outputPath": "dist/HMS-Frontend",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": ["zone.js"],
@@ -53,10 +53,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "hospital-management-frontend:build:production"
+              "browserTarget": "HMS-Frontend:build:production"
             },
             "development": {
-              "browserTarget": "hospital-management-frontend:build:development"
+              "browserTarget": "HMS-Frontend:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -64,7 +64,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "hospital-management-frontend:build"
+            "browserTarget": "HMS-Frontend:build"
           }
         },
         "test": {
