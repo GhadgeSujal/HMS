@@ -1,4 +1,7 @@
 # Hospital Management System
+## Live Site
+
+You can visit the live site here: [Siddhinath Hospital](https://siddhinathhospital.netlify.app)
 
 ![Angular](https://img.shields.io/badge/Angular-16-red)
 ![Java](https://img.shields.io/badge/Java-SpringBoot-brightgreen)
